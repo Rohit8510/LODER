@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <!-- WebView overlay -->
+    <RelativeLayout
+        android:id="@+id/webViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0A0A0A"
+        android:visibility="gone"
+        android:elevation="10dp">
+        <WebView
+            android:id="@+id/activity_main_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/close_button"/>
+        <TextView
+            android:id="@+id/close_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="✕   CLOSE"
+            android:gravity="center"
+            android:textColor="#C9A84C"
+            android:textSize="12sp"
+            android:letterSpacing="0.15"
+            android:fontFamily="sans-serif-medium"
+            android:background="#111111"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <!-- Login layout -->
+    <ScrollView
+        android:id="@+id/lay_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="72dp"
+            android:paddingBottom="40dp">
+
+            <!-- Logo + Title -->
+            <LinearLayout
+                android:id="@+id/animeson_enter_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/jkpapa_ka_loda"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_launcher"
+                    android:scaleType="centerCrop"/>
+
+                <View android:layout_width="0dp" android:layout_height="18dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ELITE LOADER"
+                    android:textColor="#C9A84C"
+                    android:textSize="24sp"
+                    android:letterSpacing="0.3"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BGMI  ·  PREMIUM"
+                    android:textColor="#444444"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.3"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"/>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1dp"
+                    android:background="#C9A84C"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="32dp"/>
+            </LinearLayout>
+
+            <!-- Key input card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LICENSE KEY"
+                    android:textColor="#C9A84C"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="10dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input">
+
+                    <EditText
+                        android:id="@+id/textUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="88dp"
+                        android:hint="Enter your license key"
+                        android:textColorHint="#444444"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@null"
+                        android:inputType="textPassword"
+                        android:singleLine="true"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentEnd="true"
+                        android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:id="@+id/paste"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:padding="8dp"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:tint="#666666"
+                            android:clickable="true"
+                            android:focusable="true"/>
+
+                        <ImageView
+                            android:id="@+id/vis_pwd"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:padding="8dp"
+                            android:src="@android:drawable/ic_menu_view"
+                            android:tint="#666666"
+                            android:clickable="true"
+                            android:focusable="true"/>
+
+                        <ImageView
+                            android:id="@+id/show_pwd"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:padding="8dp"
+                            android:src="@android:drawable/ic_menu_view"
+                            android:tint="#C9A84C"
+                            android:visibility="gone"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="14dp"/>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:id="@+id/loginbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- ✅ FIXED: Using Button instead of CardView -->
+                <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="ACTIVATE"
+                    android:textColor="#0A0A0A"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.2"
+                    android:fontFamily="sans-serif-black"
+                    android:background="@drawable/btn_gold"
+                    android:stateListAnimator="@null"
+                    android:elevation="0dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View android:layout_width="0dp" android:layout_height="10dp"/>
+
+                <TextView
+                    android:id="@+id/ShowWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center"
+                    android:text="RESET LICENSE"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/btn_outline_gold"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="32dp"/>
+
+            <!-- Bottom: version + theme toggle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BUILD"
+                        android:textColor="#333333"
+                        android:textSize="9sp"
+                        android:letterSpacing="0.15"/>
+                    <TextView
+                        android:id="@+id/VERSION_NAME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="v1.0.0"
+                        android:textColor="#C9A84C"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-medium"/>
+                </LinearLayout>
+
+                <!-- Theme toggle -->
+                <LinearLayout
+                    android:id="@+id/theme_toggle"
+                    android:layout_width="56dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_card"
+                    android:padding="4dp">
+                    <ImageView
+                        android:id="@+id/icon_light"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/btn_star"
+                        android:tint="#C9A84C"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <View android:layout_width="4dp" android:layout_height="0dp"/>
+                    <ImageView
+                        android:id="@+id/icon_dark"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_menu_day"
+                        android:tint="#444444"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+
+                <!-- Hidden telegram -->
+                <ImageView
+                    android:id="@+id/telegram_opne"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

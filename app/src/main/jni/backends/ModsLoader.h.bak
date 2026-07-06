@@ -1,0 +1,79 @@
+#include <vector>
+#include <string>
+
+std::string g_Token;
+std::string g_Auth;
+std::string g_Expire;
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_pubgm_Login_setAuth(JNIEnv *env, jclass clazz,jstring token,jstring auth) {
+    const char* t = env->GetStringUTFChars(token, 0);
+    const char* a = env->GetStringUTFChars(auth, 0);
+    g_Token = t;
+    g_Auth = a;
+    env->ReleaseStringUTFChars(token, t);
+    env->ReleaseStringUTFChars(auth, a);
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_pubgm_Login_setExpire(JNIEnv *env, jclass clazz, jstring exp) {
+    const char* Expire = env->GetStringUTFChars(exp, 0);
+    g_Expire = Expire;
+    env->ReleaseStringUTFChars(exp, Expire);
+}
+
+extern "C"
+JNIEXPORT jobject JNICALL
+Java_com_pubgm_Login_getheaders(JNIEnv *env, jclass clazz) {
+    std::vector<std::string> headers = {
+        OBFUSCATE("Content-Type"),
+        OBFUSCATE("application/x-www-form-urlencoded"),
+        OBFUSCATE("Accept"),
+        OBFUSCATE("application/json"),
+        OBFUSCATE("Charset"),
+        OBFUSCATE("UTF-8"),
+        OBFUSCATE("User-Agent"),
+        OBFUSCATE("AbsoluteX/2.0"),
+        OBFUSCATE("PUBG"),
+        OBFUSCATE("user_key"),
+        OBFUSCATE("serial"),
+        OBFUSCATE("Vm8Lk7Uj2JmsjCPVPVjrLa7zgfx3uz9E")
+    };
+
+    jclass arrayListClass = env->FindClass("java/util/ArrayList");
+    jmethodID constructor = env->GetMethodID(arrayListClass, "<init>", "()V");
+    jobject list = env->NewObject(arrayListClass, constructor);
+    jmethodID add = env->GetMethodID(arrayListClass, "add", "(Ljava/lang/Object;)Z");
+
+    for (auto &h : headers) {
+        jstring str = env->NewStringUTF(h.c_str());
+        env->CallBooleanMethod(list, add, str);
+        env->DeleteLocalRef(str);
+    }
+
+    return list;
+}
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_pubgm_Login_getbaseurl(JNIEnv *env, jclass clazz) {
+    std::string url = OBFUSCATE("ADD YOUR PANEL HERE");
+    //std::string url = OBFUSCATE("https://finalcheat.ai-new.xyz/server");
+    return env->NewStringUTF(url.c_str());
+}
+
+extern "C" JNIEXPORT jstring JNICALL 
+Java_com_pubgm_BoxApplication_BoxApp(JNIEnv* env, jobject thiz) {
+    return env->NewStringUTF(OBFUSCATE("60day>godl-abhi568"));
+    //return env->NewStringUTF(OBFUSCATE("60day>game-rhsi568"));
+}
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_pubgm_Login_FixCrash(JNIEnv *env, jobject thiz) {
+    return env->NewStringUTF(OBFUSCATE("https://github.com/rayansyed2295-bit/Sock/releases/download/New/panda.zip"));
+   // return env->NewStringUTF(OBFUSCATE("https://github.com/omii71/BEASTCROWN1/releases/download/BEASTCROWN/Saved.zip"));
+   // return env->NewStringUTF(OBFUSCATE("https://github.com/Jagdishvip/Bgmi/releases/download/Bgmi/BGMI.zip"));
+}

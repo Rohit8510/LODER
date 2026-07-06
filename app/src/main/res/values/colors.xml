@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── GOLD THEME ─────────────────────────────────── -->
+    <color name="gold">#C9A84C</color>
+    <color name="gold_light">#E8C96A</color>
+    <color name="gold_dark">#8B6914</color>
+    <color name="gold_alpha">#33C9A84C</color>
+
+    <!-- ── APP BACKGROUNDS ────────────────────────────── -->
+    <color name="bg_primary">#0A0A0A</color>
+    <color name="bg_card">#111111</color>
+    <color name="bg_card2">#181818</color>
+    <color name="bg_input">#1A1A1A</color>
+
+    <!-- ── TEXT ───────────────────────────────────────── -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="text_gold">#C9A84C</color>
+    <color name="text_hint">#555555</color>
+
+    <!-- ── STATUS ─────────────────────────────────────── -->
+    <color name="green_live">#00E676</color>
+    <color name="red_error">#FF4444</color>
+
+    <!-- ── MISC ───────────────────────────────────────── -->
+    <color name="divider">#222222</color>
+    <color name="stroke">#2A2A2A</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_60">#99000000</color>
+
+    <!-- ══════════════════════════════════════════════════
+         REQUIRED BY AAR/DRAWABLES/LAYOUTS — DO NOT REMOVE
+    ══════════════════════════════════════════════════════ -->
+
+    <!-- Primary palette -->
+    <color name="primary">#C9A84C</color>
+    <color name="primary_dark">#8B6914</color>
+    <color name="primary_light">#E8C96A</color>
+    <color name="accent">#C9A84C</color>
+    <color name="secondary">#E8C96A</color>
+
+    <!-- Text -->
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#AAAAAA</color>
+
+    <!-- Basic -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Background variants -->
+    <color name="background">#0A0A0A</color>
+    <color name="window_bg">#0A0A0A</color>
+
+    <!-- Blue variants (used by icon drawables) -->
+    <color name="blue">#C9A84C</color>
+    <color name="blue2">#E8C96A</color>
+
+    <!-- Glass / Glassmorphism (used by bg_glass_card, bg_uuid) -->
+    <color name="glass_highlight">#1AFFFFFF</color>
+    <color name="glass_surface">#0DFFFFFF</color>
+    <color name="glass_border">#33C9A84C</color>
+
+    <!-- Error -->
+    <color name="error">#FF4444</color>
+
+    <!-- Material color aliases -->
+    <color name="colorPrimary">#C9A84C</color>
+    <color name="colorPrimaryDark">#8B6914</color>
+    <color name="colorAccent">#C9A84C</color>
+    <color name="colorBackground">#0A0A0A</color>
+    <color name="colorSurface">#111111</color>
+    <color name="colorError">#FF4444</color>
+    <color name="colorOnPrimary">#000000</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+
+    <!-- Extra preventive colors -->
+    <color name="card_bg">#111111</color>
+    <color name="input_bg">#1A1A1A</color>
+    <color name="ripple_color">#33C9A84C</color>
+    <color name="hint_color">#555555</color>
+    <color name="border_color">#2A2A2A</color>
+    <color name="shadow_color">#44000000</color>
+    <color name="overlay_color">#99000000</color>
+    <color name="success_color">#00E676</color>
+    <color name="warning_color">#FFC107</color>
+    <color name="error_color">#FF4444</color>
+    <color name="divider_color">#222222</color>
+    <color name="icon_tint">#C9A84C</color>
+    <color name="status_bar_color">#0A0A0A</color>
+    <color name="navigation_bar_color">#0A0A0A</color>
+    <color name="notification_bg">#111111</color>
+    <color name="progress_track">#1A1A1A</color>
+    <color name="progress_indicator">#C9A84C</color>
+    <color name="surface">#111111</color>
+    <color name="on_primary">#000000</color>
+    <color name="on_surface">#FFFFFF</color>
+    <color name="on_background">#FFFFFF</color>
+    <color name="grey">#888888</color>
+    <color name="dark_grey">#333333</color>
+    <color name="light_grey">#CCCCCC</color>
+    <color name="red">#FF4444</color>
+    <color name="green">#00E676</color>
+    <color name="yellow">#FFC107</color>
+    <color name="orange">#FF9800</color>
+
+</resources>

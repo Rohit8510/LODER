@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="12dp"
+    android:padding="16dp">
+
+    <!-- Top row: icon + info + status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Game icon -->
+        <ImageView
+            android:id="@+id/gameIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_card2"/>
+
+        <View android:layout_width="14dp" android:layout_height="0dp"/>
+
+        <!-- Game info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Name"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/gameVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v1.0.0"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <!-- Status badge -->
+                <TextView
+                    android:id="@+id/gameStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE"
+                    android:textColor="#00E676"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="#333333"
+                    android:layout_marginHorizontal="8dp"/>
+
+                <!-- Region badge -->
+                <TextView
+                    android:id="@+id/gameRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INDIA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="2dp"
+                    android:letterSpacing="0.1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Size -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIZE"
+                android:textColor="#333333"
+                android:textSize="9sp"
+                android:letterSpacing="0.1"/>
+            <TextView
+                android:id="@+id/gameSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 MB"
+                android:textColor="#C9A84C"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Package name -->
+    <TextView
+        android:id="@+id/gamePackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="com.package.name"
+        android:textColor="#333333"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/gameGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Action"
+        android:textColor="#444444"
+        android:textSize="10sp"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Gold divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1A1A1A"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/noBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="WIPE"
+            android:textColor="#FF4444"
+            android:textSize="12sp"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/btn_outline_gold"
+            android:visibility="gone"/>
+
+        <View android:layout_width="10dp" android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/okBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="LAUNCH"
+            android:textColor="#0A0A0A"
+            android:textSize="12sp"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-black"
+            android:background="@drawable/btn_gold"/>
+    </LinearLayout>
+
+</LinearLayout>

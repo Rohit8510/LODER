@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider_gold"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/animationView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminate="true"
+            app:trackColor="#1A1A1A"
+            app:indicatorColor="#C9A84C"
+            app:trackThickness="3dp"
+            android:layout_gravity="center"/>
+
+        <View android:layout_width="0dp" android:layout_height="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ELITE"
+            android:textColor="#C9A84C"
+            android:textSize="36sp"
+            android:letterSpacing="0.4"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOADER"
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:letterSpacing="0.55"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="1dp"
+            android:background="#C9A84C"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <View android:layout_width="0dp" android:layout_height="36dp"/>
+
+        <TextView
+            android:id="@+id/descTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initializing..."
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:letterSpacing="0.08"
+            android:layout_gravity="center"/>
+
+        <View android:layout_width="0dp" android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <View android:id="@+id/dot1" android:layout_width="5dp" android:layout_height="5dp" android:background="#C9A84C" android:alpha="0.3"/>
+            <View android:layout_width="8dp" android:layout_height="0dp"/>
+            <View android:id="@+id/dot2" android:layout_width="5dp" android:layout_height="5dp" android:background="#C9A84C" android:alpha="0.3"/>
+            <View android:layout_width="8dp" android:layout_height="0dp"/>
+            <View android:id="@+id/dot3" android:layout_width="5dp" android:layout_height="5dp" android:background="#C9A84C" android:alpha="0.3"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottomStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SECURE  ·  FAST  ·  UNDETECTED"
+        android:textColor="#2A2A2A"
+        android:textSize="9sp"
+        android:letterSpacing="0.2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider_gold"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|end"
+    android:textAlignment="viewEnd"
+    tools:ignore="RtlHardcoded">
+
+    <!-- Main ESP Panel -->
+    <RelativeLayout
+        android:id="@+id/espView"
+        android:layout_width="280dp"
+        android:layout_height="340dp"
+        android:padding="4dp"
+        android:background="@drawable/bg_uuid"
+        android:elevation="12dp"
+        android:visibility="visible"
+        tools:ignore="UselessParent">
+
+        <!-- Content ScrollView -->
+        <ScrollView
+            android:id="@+id/contentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="45dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Tab Buttons -->
+                <RelativeLayout
+                    android:id="@+id/Section"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="12dp"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_glass_card"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/playerBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/item_selector_elite"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:text="ESP"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/divider" />
+
+                        <TextView
+                            android:id="@+id/aimbotBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/item_selector_elite"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:text="AIM"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/divider"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/otherBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/item_selector_elite"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:text="MISC"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- ESP Tab Content -->
+                <LinearLayout
+                    android:id="@+id/players"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- ESP Toggle -->
+                    <TextView
+                        android:id="@+id/EnableEsp"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:background="@color/primary"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="ESP Enable"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!-- Logo Bypass -->
+                    <RelativeLayout
+                        android:id="@+id/logoBypassLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:padding="4dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/logoIcon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/bypass"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/isLogoBypass"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/logoIcon"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_vertical"
+                            android:text="Logo Bypass on in Krafton"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <!-- Lobby Bypass -->
+                    <RelativeLayout
+                        android:id="@+id/lobbyBypassLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:padding="4dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/lobbyIcon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/bypass"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/isLobbyBypass"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/lobbyIcon"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_vertical"
+                            android:text="Lobby Bypass on in Lobby"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <!-- ESP Switches -->
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:text="Esp Box"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Line"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isDist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Distance"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isHealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Health"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Names"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Head"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isPlayerNation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Nation"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isLootItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Esp Loot Items"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isHideBot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Hide Bot"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/is360Alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="360° Alert"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <LinearLayout
+                        android:id="@+id/donor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isSkeleton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Esp Skeleton"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isGrenadeWarning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Grenade Alert"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isPlayerWeapon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Player Weapon"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isPlayerTeamID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Player TeamID"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isVehicles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Vehicles"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingStart="12dp"
+                            android:text="Items"
+                            android:textColor="@color/white"
+                            android:theme="@style/PKSwitch"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <!-- ✅ COLOR ANIMATION TOGGLE BUTTON -->
+                    <TextView
+                        android:id="@+id/toggleColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="🌈 Start Color Animation"
+                        android:textColor="#C9A84C"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- AIM Tab Content -->
+                <LinearLayout
+                    android:id="@+id/aimbots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/secondary"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="AIMBOT CONFIG"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/mnaim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:visibility="visible">
+
+                        <RadioGroup
+                            android:id="@+id/grupaim"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/disableaim"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Disable Aimbot"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/aimbot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Aim-bot"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/bullettrack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Bullet Tracking"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!-- AIM Settings -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="AIMBOT RANGE"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/rangeText"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary" />
+
+                            <SeekBar
+                                android:id="@+id/range"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="120"
+                                android:progress="0"
+                                android:progressTint="@color/primary"
+                                android:thumbTint="@color/primary" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="MAX DISTANCE"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/distancetext"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary" />
+
+                            <SeekBar
+                                android:id="@+id/distances"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="120"
+                                android:progress="0"
+                                android:progressTint="@color/primary"
+                                android:thumbTint="@color/primary" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="AIM RECOIL COMPE"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/AimRecoilCompetext"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary" />
+
+                            <SeekBar
+                                android:id="@+id/AimRecoilCompe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="60"
+                                android:progress="0"
+                                android:progressTint="@color/primary"
+                                android:thumbTint="@color/primary" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="MAX WIDE VIEW"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/wideviewtext"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary" />
+
+                            <SeekBar
+                                android:id="@+id/wideview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="120"
+                                android:progress="0"
+                                android:progressTint="@color/primary"
+                                android:thumbTint="@color/primary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/aimknocked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/acme"
+                        android:text="    Aim ignore Knocked"
+                        android:textColor="#FFFFFF"
+                        android:theme="@style/PKSwitch"
+                        android:thumbTint="@drawable/ic_switch_off"
+                        android:trackTint="@drawable/ic_switch_on"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/aimignorebot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:checked="true"
+                        android:fontFamily="@font/acme"
+                        android:text="    Aim ignore bot"
+                        android:textColor="#FFFFFF"
+                        android:theme="@style/PKSwitch"
+                        android:thumbTint="@drawable/ic_switch_off"
+                        android:trackTint="@drawable/ic_switch_on"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <!-- Target Location -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="TARGET LOCATION"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <RadioGroup
+                            android:id="@+id/aimbotmode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_Head"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/accent"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="1"
+                                android:text="Head"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/radio_Chest"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/accent"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="3"
+                                android:text="Chest"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/radio_Waist"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/accent"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="2"
+                                android:text="Waist"
+                                android:textColor="@color/white" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="#2B2A2A"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Aim By"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="AIM ACTIVATION MODE"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <RadioGroup
+                            android:id="@+id/aimby"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_CrossHair"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/accent"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="1"
+                                android:text="CrossHair"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/radio_Distance"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/accent"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="0"
+                                android:text="Distance"
+                                android:textColor="@color/white" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="#2B2A2A"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Aim When"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_glass_card"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="AIMBOT TRIGGER"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+
+                        <RadioGroup
+                            android:id="@+id/aimwhen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/ADSorFiring"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="3"
+                                android:text="ADS or Firing"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/ADSonly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="1"
+                                android:text="ADS only"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/FiringOnly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="sans-serif-medium"
+                                android:tag="2"
+                                android:text="Firing Only"
+                                android:textColor="@color/white" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- MISC Tab Content -->
+                <LinearLayout
+                    android:id="@+id/memory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/accent"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="MEMORY FEATURES"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isRecoil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Less Recoil (Risky)"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isInstant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Instant Hit"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isSmallCross"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Small Crosshair"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isSpeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Speed Hack"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isNightMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="12dp"
+                        android:text="Night Mode"
+                        android:textColor="@color/white"
+                        android:theme="@style/PKSwitch" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Bottom Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#1A1A1A"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="⚡ ELITE LOADER"
+                android:textColor="#C9A84C"
+                android:textSize="12sp"
+                android:letterSpacing="0.2" />
+
+        </LinearLayout>
+
+        <!-- Close Button -->
+        <TextView
+            android:id="@+id/closeBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/contentView"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="✕"
+            android:textColor="#C9A84C"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- Logo Icon (Collapsed) -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/layoutCollapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/floatLogo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_launcher"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

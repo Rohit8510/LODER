@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|start">
+
+    <!-- Main Logo -->
+    <LinearLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_card"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡"
+            android:textSize="24sp"
+            android:textColor="#C9A84C"/>
+    </LinearLayout>
+
+    <!-- ESP Panel -->
+    <LinearLayout
+        android:id="@+id/espPanel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIVISION LOADER"
+            android:textColor="#C9A84C"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- ESP Toggle -->
+        <TextView
+            android:id="@+id/espToggle"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:text="✗ ESP"
+            android:textColor="#BDBDBD"
+            android:textSize="10sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- AIM Toggle -->
+        <TextView
+            android:id="@+id/aimToggle"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:text="✗ AIM"
+            android:textColor="#BDBDBD"
+            android:textSize="10sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- ESP Visuals -->
+        <TextView
+            android:id="@+id/espLine"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Line: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espDistance"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Distance: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espHealth"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Health: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espNames"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Names: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espHead"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Head: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/esp360"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="360 Alert: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espSkeleton"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Skeleton: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:id="@+id/espGrenade"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Grenade: OFF"
+            android:textColor="#888888"
+            android:textSize="9sp"
+            android:background="@drawable/bg_card2"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- AIM CONFIG -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AIM CONFIG"
+            android:textColor="#C9A84C"
+            android:textSize="9sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginBottom="2dp"/>
+
+        <RadioGroup
+            android:id="@+id/aimModeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <RadioButton
+                android:id="@+id/aimDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Off"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/aimAimbot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Aim"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"/>
+
+            <RadioButton
+                android:id="@+id/aimBullet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bullet"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="Range:"
+                android:textColor="#888888"
+                android:textSize="8sp"/>
+
+            <SeekBar
+                android:id="@+id/aimRange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="200"
+                android:progress="50"
+                android:thumbTint="#C9A84C"
+                android:progressTint="#C9A84C"/>
+
+            <TextView
+                android:id="@+id/aimRangeText"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="50m"
+                android:textColor="#C9A84C"
+                android:textSize="8sp"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginVertical="4dp"/>
+
+        <!-- Close Button -->
+        <TextView
+            android:id="@+id/closeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="✕ CLOSE"
+            android:textColor="#FF4444"
+            android:textSize="9sp"
+            android:background="@drawable/btn_outline_gold"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</FrameLayout>
