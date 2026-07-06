@@ -13,21 +13,26 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
+          cache: gradle
 
-      - name: Validate Gradle Wrapper
-        uses: gradle/actions/wrapper-validation@v4
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
-      - uses: gradle/actions/setup-gradle@v4
+      - name: Install SDK Packages
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools"
+          sdkmanager "platforms;android-34"
+          sdkmanager "build-tools;34.0.0"
 
-      - run: chmod +x gradlew
+      - name: Grant Permission
+        run: chmod +x gradlew
 
-      - run: ./gradlew --version
-
-      - run: ./gradlew assembleDebug --stacktrace --no-daemon
+      - name: Build APK
+        run: ./gradlew assembleDebug --stacktrace
 
       - uses: actions/upload-artifact@v4
-        if: success()
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/*.apk
